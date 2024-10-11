@@ -6,7 +6,7 @@ function Header() {
     <div>
       <div className="main">
         <img className="img" src={rocketsvg} alt="" />
-        <h2>Made by mandeep Singh </h2>
+        <h2>Made by Mandeep Singh </h2>
       </div>
     </div>
   );
