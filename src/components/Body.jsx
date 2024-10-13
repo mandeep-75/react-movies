@@ -61,7 +61,7 @@ const Body = () => {
         </div>
       ) : (
         <div className="empty">
-          <h2>No movies found for given query</h2>
+          <h2>No movies/series found for given query</h2>
         </div>
       )}
     </div>
