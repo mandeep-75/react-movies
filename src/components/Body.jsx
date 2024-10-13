@@ -9,17 +9,6 @@ const Body = () => {
   const [movies, setMovies] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
 
-  //useEffect(() => {
-  //  searchMovies("lucifer");
-  //  vidsrcCatalog();
-  //}, []);
-
-  // const vidsrcCatalog = async () => {
-  //  const response = await fetch(`https://vidsrc.xyz/movies/latest/page-1.json`);
-  //  const data = await response.json();
-  //  console.log(data);
-  //  setMovies(data);
-  //};
   // learn react router. To make home page with vidsrc latest movies catalogs.
 
   const searchMovies = async (title) => {
