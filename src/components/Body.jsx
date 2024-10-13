@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import "./Body.css";
 import SearchIcon from "../assets/search.svg";
 import MovieCard from "./MovieCard";
@@ -8,7 +8,6 @@ const API_URL = "https://www.omdbapi.com/?i=tt3896198&apikey=3a5fa550";
 const Body = () => {
   const [movies, setMovies] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
-
   // learn react router. To make home page with vidsrc latest movies catalogs.
 
   const searchMovies = async (title) => {
