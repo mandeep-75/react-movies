@@ -20,6 +20,7 @@ animation-iteration-count: infinite;
   height: 3rem;
   margin-left: 1rem;
 filter: invert(48%) sepia(79%) saturate(2476%);
+margin-right: 2rem;
 
 }
 .main button1 {
