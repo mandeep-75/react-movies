@@ -5,10 +5,11 @@ import MovieCard from "./MovieCard";
 
 const API_URL = "https://www.omdbapi.com/?i=tt3896198&apikey=3a5fa550";
 
-const Body = () => {
+const Body = ({edittask,setedittask}) => {
   const [movies, setMovies] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
   // learn react router. To make home page with vidsrc latest movies catalogs.
+
 
   const searchMovies = async (title) => {
     const response = await fetch(`${API_URL}&s=${title}`);
@@ -44,7 +45,7 @@ const Body = () => {
       {movies?.length > 0 ? (
         <div className="container">
           {movies.map((movie) => (
-            <MovieCard movie={movie} key={movie.imdbID} />
+            <MovieCard movie={movie} key={movie.imdbID} edittask={edittask} setedittask={setedittask}/>
           ))}
         </div>
       ) : (
