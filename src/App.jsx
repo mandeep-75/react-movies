@@ -10,7 +10,7 @@ export default function App() {
   
   return (
     <div>
-      <p>{edi}</p>
+      <p>{edittask}</p>
       <Header />
       
       <Body edittask={edittask} setedittask={setedittask} />
