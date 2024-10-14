@@ -13,8 +13,14 @@
   -webkit-box-shadow: 5px 5px 7px #1c1d1f, -5px -5px 7px #222527;
   box-shadow: 5px 5px 7px #1c1d1f, -5px -5px 7px #222527;
 }
-.main img {
+.main img { 
+  animation-name: ckw;
+  animation-duration: 15.5s;
+animation-iteration-count: infinite;
   height: 3rem;
+  margin-left: 1rem;
+filter: invert(48%) sepia(79%) saturate(2476%);
+
 }
 .main button1 {
   background-color: rgb(238, 238, 238);
@@ -27,4 +33,12 @@
   margin-right: 1rem;
 
   color: rgb(247, 168, 72);
+}
+@keyframes ckw {
+  0% {
+      transform: rotate(360deg);
+  }
+  100% {
+      transform: rotate(0deg);
+  }
 }
