@@ -5,7 +5,8 @@ export default function Footer() {
     <div className="footer">
       <p>
         This project in work in progress.There is many links that don't work
-        due to api's not working together and not filtering anything.
+        due to api's not working together and not filtering .
+        test
       </p>
     </div>
   );
