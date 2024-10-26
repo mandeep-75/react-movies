@@ -13,13 +13,14 @@ const Body = () => {
   const searchMovies = async (title) => {
     const response = await fetch(`${API_URL}&s=${title}`);
     const data = await response.json();
-    console.log(data);
+
     setMovies(data.Search);
   };
   // move fetching req to App.jsx for easy managing
 
   const handleKeyDown = (e) => {
     if (e.keyCode === 13) {
+      console.log(e.keyCode);
       searchMovies(searchTerm);
     }
   };
@@ -37,7 +38,10 @@ const Body = () => {
         <img
           src={SearchIcon}
           alt="search"
-          onClick={() => searchMovies(searchTerm)}
+          onClick={() => {
+            searchMovies(searchTerm);
+            console.log(searchTerm);
+          }}
         />
       </div>
 
