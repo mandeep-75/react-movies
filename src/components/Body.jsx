@@ -40,7 +40,7 @@ const Body = () => {
           alt="search"
           onClick={() => {
             searchMovies(searchTerm);
-            console.log(searchTerm);
+            console.log(" searchTerm :", searchTerm);
           }}
         />
       </div>
