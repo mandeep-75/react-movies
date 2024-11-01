@@ -1,23 +1,11 @@
-import { useEffect, useRef, useState } from "react";
+import { useState } from "react";
 import "./Body.css";
 import SearchIcon from "../assets/search.svg";
 import MovieCard from "./MovieCard";
 
-const API_URL = "https://www.omdbapi.com/?i=tt3896198&apikey=3a5fa550";
-
-const Body = () => {
-  const [movies, setMovies] = useState([]);
+const Body = ({ searchMovies, movies }) => {
   const [searchTerm, setSearchTerm] = useState("");
   // learn react router. To make home page with vidsrc latest movies catalogs.
-
-  const searchMovies = async (title) => {
-    const response = await fetch(`${API_URL}&s=${title}`);
-    const data = await response.json();
-
-    setMovies(data.Search);
-  };
-  // move fetching req to App.jsx for easy managing
-
   const handleKeyDown = (e) => {
     if (e.keyCode === 13) {
       console.log(e.keyCode);
