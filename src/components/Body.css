@@ -84,6 +84,17 @@ body {
   align-items: center;
   flex-wrap: wrap;
 }
+.app .load-button {
+  font-size: x-large;
+  padding: 1rem 1rem 1rem 1rem;
+  border-radius: 0.5rem;
+  margin-top: 2rem;
+  background: linear-gradient(
+    90deg,
+    rgb(246, 81, 40) 0%,
+    rgb(62, 221, 56) 100%
+  );
+}
 
 @media screen and (max-width: 600px) {
   .app {
