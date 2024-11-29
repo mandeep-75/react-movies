@@ -24,8 +24,7 @@ export default function App() {
   };
   const loadMore = async (title) => {
     if (title !== "") {
-      document.getElementById("myButton").textContent =
-      "Load More Content";
+      document.getElementById("myButton").textContent = "Load More Content";
       try {
         const response = await fetch(
           `${API_URL}&s=${title}&page=${pageNumber}`
@@ -37,13 +36,11 @@ export default function App() {
           document.getElementById("myButton").textContent =
             "No additional Movies found";
         } else {
-        
           const combinedMovies = [...(movies || []), ...(data.Search || [])];
           setPagenumber(pageNumber + 1);
           console.log("Page:", pageNumber);
           setMovies(combinedMovies);
         }
-
       } catch (error) {
         console.error("Fetch error:", error.message);
       }
@@ -62,6 +59,7 @@ export default function App() {
         loadNeed={loadNeed}
         setloadNeed={setloadNeed}
       />
+
       <Footer />
       <SpeedInsights />
     </div>
